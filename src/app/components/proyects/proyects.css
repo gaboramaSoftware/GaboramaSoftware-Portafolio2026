@@ -1,0 +1,133 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap");
+
+:host {
+  font-family: "Poppins", sans-serif;
+  display: block;
+}
+
+section {
+  padding-top: 4vh;
+  height: 96vh;
+  margin: 0 10rem;
+  box-sizing: border-box;
+  min-height: fit-content;
+  position: relative;
+}
+
+.title {
+  font-size: 3rem;
+  text-align: center;
+  color: black;
+  margin-bottom: 2rem;
+}
+
+.experience-details-container {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.about-containers {
+  display: flex;
+  gap: 2rem;
+  margin-bottom: 2rem;
+  margin-top: 2rem;
+}
+
+.details-container {
+  padding: 1.5rem;
+  flex: 1;
+  border-radius: 2rem;
+  border: rgb(163, 163, 163) 0.1rem solid;
+  text-align: center;
+}
+
+.color-container {
+  background: rgb(250, 250, 250);
+}
+
+/* RENDERIZADO DE IMÁGENES DE PROYECTO */
+.article-container {
+  display: flex;
+  justify-content: center;
+}
+
+.project-img {
+  border-radius: 2rem;
+  width: 90%;
+  max-height: 250px;
+  object-fit: cover;
+  margin: 0 auto;
+}
+
+.project-title {
+  margin: 1.5rem 0;
+  color: black;
+  font-weight: 600;
+  font-size: 1.75rem;
+}
+
+/* CONTENEDOR DE BOTONES Y ENLACES (ESTILO REF) */
+.btn-container {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.btn {
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
+  text-decoration: none;
+  text-align: center;
+  transition: all 300ms ease;
+  padding: 1rem;
+  width: 8rem;
+  border-radius: 2rem;
+  font-size: 0.9rem;
+  box-sizing: border-box;
+  display: inline-block;
+}
+
+.btn-color-2 {
+  border: rgb(53, 53, 53) 0.1rem solid;
+  background: none;
+  color: black;
+  cursor: pointer;
+}
+
+.btn-color-2:hover {
+  background: rgb(53, 53, 53);
+  color: white;
+}
+
+/* COMPONENTES DE INTERFAZ GENERAL */
+.icon {
+  height: 2rem;
+}
+
+.arrow {
+  position: absolute;
+  right: -5rem;
+  bottom: 2.5rem;
+  cursor: pointer;
+}
+
+/* RESPONSIVE */
+@media screen and (max-width: 1200px) {
+  section {
+    margin: 0 5rem;
+  }
+}
+
+@media screen and (max-width: 900px) {
+  section {
+    height: auto;
+    padding-bottom: 4rem;
+  }
+  .about-containers {
+    flex-direction: column;
+  }
+  .arrow {
+    display: none;
+  }
+}

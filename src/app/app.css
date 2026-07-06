@@ -1,0 +1,25 @@
+:root {
+  --primary-color: #ff4d4d;
+  --bg-color: #1a0f1d;
+  --text-color: #ffffff;
+  --font-main: 'Arial', sans-serif;
+}
+
+/* Reset básico */
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { background: var(--bg-color); color: var(--text-color); font-family: var(--font-main); }
+
+main {
+  display: block;
+  width: 100%;
+  margin-top: 17vh; 
+  min-height: calc(100vh - 17vh);
+  padding-bottom: 80px; 
+  box-sizing: border-box;
+}
+
+@media screen and (max-width: 900px) {
+  main {
+    padding-bottom: 60px;
+  }
+}

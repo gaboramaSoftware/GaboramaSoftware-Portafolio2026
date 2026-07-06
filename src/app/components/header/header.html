@@ -1,0 +1,27 @@
+<header class="dc-container">
+  
+  <div class="dc-carousel" (touchstart)="handleTouchStart($event)" (touchend)="handleTouchEnd($event)">
+    <button class="arrow" (click)="prev()" aria-label="Anterior">&lt;&lt;</button>
+    <span class="active-title">{{ links[activeIndex] }}</span>
+    <button class="arrow" (click)="next()" aria-label="Siguiente">&gt;&gt;</button>
+  </div>
+
+  <nav class="dc-nav">
+    @for (link of links; track link; let i = $index) {
+      <button 
+        type="button"
+        class="dc-link"
+        [class.active]="activeIndex === i"
+        (mouseenter)="handleHover()"
+        (click)="changeSection(i)"
+      >
+        {{ link }}
+      </button>
+    }
+  </nav>
+
+  <div class="dc-info">
+    <span>{{ dateStr }}</span>
+    <span>{{ timeStr }}</span>
+  </div>
+</header>

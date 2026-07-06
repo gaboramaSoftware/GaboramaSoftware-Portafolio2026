@@ -1,0 +1,52 @@
+:host {
+  display: block;
+  width: 100%;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  z-index: 999; /* Asegura que flote por encima de las secciones y del canvas 3D */
+}
+
+.portfolio-footer {
+  background-color: rgba(255, 255, 255, 0.85); /* Fondo semitransparente */
+  backdrop-filter: blur(8px); /* Efecto blur estilo iOS/Premium */
+  -webkit-backdrop-filter: blur(8px);
+  border-top: 1px solid rgba(220, 220, 220, 0.7);
+  padding: 1rem 0;
+  width: 100%;
+  box-sizing: border-box;
+  box-shadow: 0 -4px 20px rgba(0, 0, 0, 0.05); /* Sombra sutil hacia arriba */
+}
+
+.footer-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 10rem;
+}
+
+.footer-content p {
+  font-family: "Poppins", sans-serif;
+  font-size: 0.85rem;
+  color: rgb(80, 80, 80);
+  font-weight: 500;
+  margin: 0;
+  text-align: center;
+  letter-spacing: 0.5px;
+}
+
+/* RESPONSIVE */
+@media screen and (max-width: 900px) {
+  .footer-content {
+    margin: 0 2rem;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .portfolio-footer {
+    padding: 0.8rem 0;
+  }
+  .footer-content p {
+    font-size: 0.75rem;
+  }
+}

@@ -1,0 +1,203 @@
+
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap");
+
+:host {
+  font-family: "Poppins", sans-serif;
+  display: block;
+}
+
+/* SECTIONS BASE */
+section {
+  padding-top: 4vh;
+  height: 96vh;
+  margin: 0 10rem;
+  box-sizing: border-box;
+  min-height: fit-content;
+}
+
+/* PROFILE LAYOUT */
+#profile {
+  display: flex;
+  justify-content: center;
+  gap: 5rem;
+  height: 80vh;
+}
+
+.section__pic-container {
+  display: flex;
+  height: 400px; 
+  width: 400px;  
+  margin: auto 0;
+}
+
+.profile-pic {
+  width: 100%;
+  height: 100px;
+  object-fit: cover;
+  border-radius: 50%; 
+}
+
+.section__text {
+  align-self: center;
+  text-align: center;
+}
+
+.section__text p {
+  font-weight: 600;
+  color: rgb(85, 85, 85);
+}
+
+.section__text__p1 {
+  text-align: center;
+}
+
+.section__text__p2 {
+  font-size: 1.75rem;
+  margin-bottom: 1rem;
+}
+
+.title {
+  font-size: 3rem;
+  text-align: center;
+  color: black;
+  margin: 0.5rem 0;
+}
+
+/* ICONS & SOCIALS */
+#socials-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 1rem;
+  gap: 1rem;
+}
+
+.icon {
+  cursor: pointer;
+  height: 2rem;
+  transition: all 300ms ease;
+}
+
+.icon:hover {
+  transform: scale(1.1);
+}
+
+/* BUTTONS */
+.btn-container {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.btn {
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
+  transition: all 300ms ease;
+  padding: 1rem;
+  width: 8rem;
+  border-radius: 2rem;
+  outline: none;
+}
+
+.btn-color-1,
+.btn-color-2 {
+  border: rgb(53, 53, 53) 0.1rem solid;
+}
+
+.btn-color-1:hover,
+.btn-color-2:hover {
+  cursor: pointer;
+}
+
+.btn-color-1 {
+  background: rgb(53, 53, 53);
+  color: white;
+}
+
+.btn-color-1:hover {
+  background: rgb(0, 0, 0);
+}
+
+.btn-color-2 {
+  background: none;
+  color: black;
+}
+
+.btn-color-2:hover {
+  background: rgb(53, 53, 53);
+  color: white;
+  border-color: rgb(53, 53, 53);
+}
+
+/* RESPONSIVE BÁSICO (Para evitar que se rompa en pantallas pequeñas mientras diseñas) */
+@media screen and (max-width: 1200px) {
+  section {
+    margin: 0 5rem;
+  }
+  #profile {
+    gap: 2rem;
+  }
+}
+
+@media screen and (max-width: 900px) {
+  section {
+    margin: 0 2rem;
+    height: auto;
+    padding-top: 2vh;
+  }
+  #profile {
+    flex-direction: column;
+    height: auto;
+    gap: 1.5rem;
+    align-items: center;
+  }
+  .section__pic-container {
+    width: 280px;  
+    height: 280px; 
+    display: block;
+    margin-top: -150px;
+  }
+  
+  /* Forzamos a que el componente use el 100% del cuadro asignado */
+  app-sun3d, .canvas-container {
+    width: 100% !important;
+    height: 100% !important;
+    display: block !important;
+    margin: 0;
+    margin-top: 100px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  section {
+    margin: 0 1rem;
+  }
+  .section__pic-container {
+    width: 200px;  
+    height: 100px; 
+  }
+  .title {
+    font-size: 1.8rem;
+  }
+  .section__text__p2 {
+    font-size: 1.3rem;
+  }
+
+  .section__text{
+    margin-top: 130px;
+    font-size: 0.8rem;
+  }
+  .section__text__p2{
+    font-size: 1rem;
+  }
+  .btn-color-1, .btn-color-2{
+    font-size: 0.5rem;
+  }
+
+  app-sun3d {
+    margin-top: 120px; 
+  }
+  .canvas-container{
+    margin:4;
+  }
+}
+
